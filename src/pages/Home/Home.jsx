@@ -35,7 +35,7 @@ useEffect(()=>{
     <div className='home'>
       <div className="hero">
         <h1> Largest <br/>Crypto Marketplace</h1>
-        <p> Welcome to the worl's largest cryptocurrency...</p>
+        <p> Welcome to the world's largest cryptocurrency...</p>
         <form onSubmit={searchHandler}>
           <input onChange={inputHandler} list='coinlist' value={input} type="text" placeholder='Search crypto..' required/>
           
@@ -64,9 +64,9 @@ useEffect(()=>{
                 <img src={item.image} alt= ""/>
                 <p>{item.name + " - " + item.symbol}</p>
               </div>
-              <p className={item.price_change_percentage_24h>0?"green":"red"}>
-                {currency.symbol} {item.current_price.toLocaleString()}</p>
-              <p>{Math.floor(item.price_change_percentage_24h*100)/100}</p>
+              <p>{currency.symbol} {item.current_price.toLocaleString()}</p>
+              <p className={item.price_change_percentage_24h>0?"green": "red"}>
+                {Math.floor(item.price_change_percentage_24h*100)/100}</p>
               
               <p className='market-cap'> {currency.symbol} {item.market_cap.toLocaleString()}</p>
             </Link>
